@@ -74,9 +74,14 @@ class Owner
   ### sell/list pets methods ###
 
   def sell_pets
-    self.pets[:dogs].each {|pet| pet.mood = "nervous"}
-    self.pets[:cats].each {|pet| pet.mood = "nervous"}
-    self.pets[:fishes].each {|pet| pet.mood = "nervous"}
+    # self.pets[:dogs].each {|pet| pet.mood = "nervous"}
+    # self.pets[:cats].each {|pet| pet.mood = "nervous"}
+    # self.pets[:fishes].each {|pet| pet.mood = "nervous"}
+    self.pets.each do |species, animal|
+      animal.each {|pet| 
+        binding.pry
+        pet.mood = "nervous"}
+    end
     self.pets.clear
   end
 
