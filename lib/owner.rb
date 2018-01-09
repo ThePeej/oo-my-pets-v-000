@@ -77,8 +77,8 @@ class Owner
     # self.pets[:dogs].each {|pet| pet.mood = "nervous"}
     # self.pets[:cats].each {|pet| pet.mood = "nervous"}
     # self.pets[:fishes].each {|pet| pet.mood = "nervous"}
-    self.pets.each do |species, animal|
-      animal.each {|pet|
+    self.pets.each do |species, pets|
+      pets.each {|pet|
         binding.pry
         pet.mood = "nervous"}
     end
